@@ -3,7 +3,7 @@ p {
 }
 body {
   height: 2000px;
-  margin-top: 45px;
+  margin-top: 83px;
   background-color: #f7f7f4;
 }
 .header {
@@ -79,9 +79,11 @@ body {
   text-wrap: nowrap;
 }
 .second-header {
+  margin-bottom: 20px;
   position: fixed;
   left: 0;
   right: 0;
+  top: 45px;
   background-color: rgb(53, 48, 48);
   height: 38px;
   display: flex;
@@ -164,4 +166,14 @@ body {
 .display .dropdown {
   display: flex;
   flex-direction: column;
+}
+.hero-contain {
+  display: flex;
+  justify-content: space-between;
+}
+.first-hero-flyer-contain {
+  max-width: 40%;
+}
+.first-hero-flyer {
+  width: 100%;
 }
