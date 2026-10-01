@@ -4,7 +4,7 @@ p {
 body {
   height: 2000px;
   margin-top: 83px;
-  background-color: #f7f7f4;
+  background-color: rgb(223, 221, 221);
 }
 .header {
   display: flex;
@@ -15,6 +15,7 @@ body {
   right: 0;
   top: 0;
   height: 40px;
+  z-index: 2;
 }
 .mjd-text {
   font-size: clamp(25px, 2vw, 2vw);
@@ -71,13 +72,6 @@ body {
   color: grey;
   font-size: 14px;
 }
-.phone-num {
-  font-weight: bold;
-  font-family: arial;
-  font-size: 18px;
-  color: rgb(53, 48, 48);
-  text-wrap: nowrap;
-}
 .second-header {
   margin-bottom: 20px;
   position: fixed;
@@ -88,6 +82,7 @@ body {
   height: 38px;
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 .header-buttons {
   margin-left: 30px;
@@ -102,6 +97,7 @@ body {
   font-weight: bold;
   margin-right: 20px;
   font-size: 20px;
+  cursor: pointer;
 }
 .category-button-contain {
   display: flex;
@@ -120,6 +116,7 @@ body {
   padding-right: 40px;
   font-weight: 500;
   transition: 0.4s;
+  cursor: pointer;
 }
 .head-buttons:hover {
   color: yellow;
@@ -132,6 +129,7 @@ body {
   font-weight: bold;
   font-size: 17px;
   font-family: roboto;
+  cursor: pointer;
 }
 .naira-sign,
 .cart-sign {
@@ -148,6 +146,7 @@ body {
   padding-right: 17px;
   padding-left: 11px;
   border-radius: 6px;
+  cursor: pointer;
 }
 .login-logo {
   padding-right: 7px;
@@ -169,11 +168,92 @@ body {
 }
 .hero-contain {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
-.first-hero-flyer-contain {
-  max-width: 40%;
-}
+
 .first-hero-flyer {
   width: 100%;
+}
+.first-hero-flyer-contain {
+  position: relative;
+}
+.hero-text-contain {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+.first-hero-text,
+.second-hero-text {
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+.second-hero-text {
+  color: rgb(14, 14, 77);
+}
+.third-hero-text {
+  color: white;
+  font-size: 17px;
+  font-family: roboto;
+}
+.line-hero {
+  height: 1px;
+  width: 550px;
+  border: none;
+  background-color: rgb(23, 19, 247);
+  margin-left: 0;
+  margin-right: 0;
+}
+.hero-buttons-contain {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+}
+.hero-buttons-contain button {
+  background-color: rgb(209, 209, 19);
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 5px rgba(80, 80, 7, 0.288);
+}
+.hero-buttons-contain button:hover {
+  background-color: rgb(97, 97, 11);
+}
+.line-after-hero {
+  height: 1px;
+  max-width: 1200px;
+  margin-top: 5px;
+  background-color: rgba(14, 12, 12, 0.356);
+}
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  gap: 10px;
+}
+.category-images-containers {
+  width: 300px;
+}
+.category-images {
+  width: 100%;
+}
+.category-images-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  flex-wrap: wrap;
 }
