@@ -295,32 +295,120 @@ body {
   margin-left: 10px;
 }
 .main-featued-div {
-  max-width: 1200px;
-  display: grid;
-  align-items: center;
-  margin-top: 40px;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
 }
 .featured-product-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-.featured-title {
+.feature-title-contain {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.featured-title,
+.featured-title-second {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+  color: rgb(7, 7, 75);
+}
+.featured-title-second {
+  color: rgb(167, 161, 161);
+  font-family: roboto;
+  font-weight: bold;
+  letter-spacing: 0;
+  font-size: 20px;
 }
 .featured-product-more {
   background-color: yellow;
   border: none;
-  padding: 14px 25px;
-  font-family: roboto;
-  font-size: 20px;
+  padding: 15px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
   border-radius: 10px;
+  color: rgb(0, 0, 0);
 }
 .featured-image-contain {
-  width: 250px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.featured-image-contain:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 0px 0px 0px rgba(197, 193, 193, 0.603);
+}
+.featured-image-contain:hover button {
+  opacity: 1;
 }
 .featured-product-images {
   width: 100%;
+}
+.featured-product-name {
+  font-family: roboto;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.featured-product-amount {
+  color: red;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 9px;
+}
+.featured-product-naira-sign {
+  color: red;
+}
+.featured-product-brand {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.featured-brand-name {
+  color: rgb(7, 7, 75);
+  margin-left: 12px;
+}
+.featured-add-button {
+  background-color: yellow;
+  border: none;
+  padding: 15px 10px;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-top: 30px;
+  border-radius: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.featured-product-contain {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+}
+.service-header {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgb(7, 7, 75);
+}
+.second-service-header {
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+  margin-top: 10px;
+}
+.servives-rendered {
+  font-size: 25px;
+  font-weight: bold;
 }
