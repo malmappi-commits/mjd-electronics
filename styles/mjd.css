@@ -6,6 +6,9 @@ body {
   margin-top: 83px;
   background-color: rgb(223, 221, 221);
 }
+a {
+  display: flex;
+}
 .header {
   display: flex;
   align-items: center;
