@@ -1,0 +1,184 @@
+.shop-inner-header {
+  font-family: roboto;
+  letter-spacing: 8px;
+  color: rgb(21, 22, 105);
+}
+.line-after-header {
+  max-width: 1400px;
+}
+.filter-product {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
+.shop-header-contain {
+  margin: 40px 25px;
+}
+.shop-header-contain p {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-family: roboto;
+  color: rgb(107, 100, 100);
+}
+.shop-category-buttons-contain {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.category-button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+  outline: none;
+}
+.category-button:hover {
+  color: rgb(60, 60, 122);
+  transform: translateY(-5px);
+}
+.product-header {
+  font-family: impact;
+  font-weight: lighter;
+  color: rgb(44, 44, 71);
+}
+.main-product-contain {
+  background-color: white;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.featured-image-contain {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.featured-image-contain:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 0px 0px 0px rgba(197, 193, 193, 0.603);
+}
+
+.featured-image-contain:hover button {
+  opacity: 1;
+}
+
+.featured-product-images {
+  width: 100%;
+}
+.featured-product-name {
+  font-family: roboto;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.featured-product-amount {
+  color: red;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 9px;
+}
+.featured-product-naira-sign {
+  color: red;
+}
+.featured-product-brand {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.featured-brand-name {
+  color: rgb(7, 7, 75);
+  margin-left: 12px;
+}
+.featured-add-button {
+  background-color: yellow;
+  border: none;
+  padding: 15px 10px;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-top: 30px;
+  border-radius: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.featured-product-contain {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+}
+
+.footer-contain {
+  background-color: rgb(53, 48, 48);
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.footer-logo {
+  color: white;
+  font-family: roboto;
+  font-size: 30px;
+  font-weight: bold;
+}
+.footer-topic {
+  color: white;
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer-inner-contain {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+.footer-explanation,
+.footer-last {
+  color: white;
+  font-family: roboto;
+}
+.footer-descriptions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.support-button {
+  background-color: transparent;
+  color: green;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: none;
+  font-family: roboto;
+  padding-left: 0;
+}
+.account-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  padding-right: 250px;
+  margin-top: 20px;
+}
+.account-link {
+  font-size: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: rgb(82, 79, 79);
+}
+.footer-last {
+  color: white;
+}
+.footer-last-contain {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
