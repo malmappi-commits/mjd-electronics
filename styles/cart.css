@@ -68,12 +68,10 @@ body {
   color: rgb(12, 12, 48);
   font-weight: bold;
 }
-.quantity-change-option {
-  background-color: rgb(15, 15, 56);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
+.bought-details-contain {
+  max-width: 400px;
 }
+
 .quantity-contain {
   display: flex;
   font-family: roboto;
@@ -81,6 +79,14 @@ body {
   font-size: 20px;
   gap: 8px;
   margin-top: 10px;
+  align-items: center;
+}
+.quantity-contain button {
+  background-color: rgb(194, 191, 191);
+  border: none;
+  padding: 5px 12px;
+  border-radius: 17px;
+  font-size: 20px;
 }
 .product-amount {
   font-family: roboto;
