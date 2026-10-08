@@ -58,3 +58,7 @@ export function updateQuantity() {
 export function addToStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+export function removeProduct(productID) {
+  cart = cart.filter((item) => item.id != productID);
+  addToStorage();
+}

@@ -24,7 +24,18 @@ body {
 }
 .items-count {
   font-family: roboto;
-  font-size: 25px;
+  font-size: 20px;
+  white-space: nowrap;
+  min-width: 200px;
+}
+.link-cart-quantity {
+  display: flex;
+  font-size: 20px;
+}
+.header-middle-section {
+  display: flex;
+  min-width: 200px;
+  flex-direction: row;
 }
 .items-count span {
   color: rgb(7, 7, 80);
@@ -97,9 +108,25 @@ body {
   flex: 1;
   text-align: center;
 }
+.product-amount-container button {
+  background-color: transparent;
+  border: solid;
+  border-width: 1px;
+  border-color: grey;
+  padding: 5px 12px;
+  border-radius: 17px;
+  font-size: 20px;
+  margin-top: 50px;
+}
 .product-header {
   font-family: impact;
   font-weight: lighter;
   color: rgb(44, 44, 71);
   margin-left: 100px;
+}
+.product-total-amount {
+  font-family: roboto;
+  font-weight: bold;
+  color: rgb(141, 3, 22);
+  margin-top: 20px;
 }
