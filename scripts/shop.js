@@ -12,7 +12,7 @@ export let cart = JSON.parse(localStorage.getItem("cart")) || [
 let shopHTML = "";
 products.forEach((product) => {
   shopHTML += `<div class="featured-image-contain">
-          <img class="featured-product-images" src="${product.image}">
+          <a href="productinfo.html?productId=${product.id}"><img class="featured-product-images" src="${product.image}"> </a>
           <p class="featured-product-name">${product.name}</p>
           <P class="featured-product-amount"><i class="fa-solid fa-naira-sign"></i>${product.price}</P>
           <p class="featured-product-brand">BRAND:<SPAN class="featured-brand-name">${product.brand}</SPAN></p>

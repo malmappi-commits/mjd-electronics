@@ -1,6 +1,59 @@
 body {
   padding-top: 40px;
 }
+.cart-display {
+  display: flex;
+  margin-top: 0;
+  padding-top: 0;
+  align-items: top;
+  gap: 20px;
+}
+.main-cart-contain {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+}
+.shopping-subtotal-contain {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 15px;
+}
+.subtotal,
+.shopping-estimate,
+.tax {
+  font-family: roboto;
+}
+.subtotla-amount,
+.tax-amount {
+  font-family: roboto;
+  font-weight: bold;
+}
+.Checkout-contain {
+  width: 400px;
+  background-color: black;
+  height: 350px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+}
+.checkout-header {
+  font-family: roboto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.place-order-click {
+  padding: 15px;
+  background-color: rgb(14, 14, 56);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 .cart-header {
   position: fixed;
   top: 0;
@@ -9,8 +62,32 @@ body {
   height: 80px;
   background-color: rgb(248, 244, 244);
 }
+.line-after-tax {
+  width: 350px;
+  margin: 20px auto 0;
+  background-color: white;
+}
+.total-display {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-top: 30px;
+  align-items: center;
+}
 .header-image-contain {
   width: 90px;
+}
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: roboto;
+  letter-spacing: 2px;
+}
+.total-amount {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: roboto;
+  letter-spacing: 2px;
+  color: rgb(16, 16, 109);
 }
 .mjd-logo {
   width: 100%;
@@ -65,6 +142,7 @@ body {
   gap: 20px;
   padding-top: 30px;
   padding-left: 30px;
+  padding-right: 30px;
   border-radius: 30px;
   margin-left: 30px;
 }

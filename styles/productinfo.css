@@ -16,6 +16,7 @@
   font-family: roboto;
   color: rgb(7, 7, 48);
   margin-top: 0;
+  max-width: 700px;
 }
 .product-price {
   color: rgb(150, 18, 18);
