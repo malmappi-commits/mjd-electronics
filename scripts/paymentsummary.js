@@ -1,4 +1,4 @@
-import { cart, addToStorage, removeProduct } from "./shop.js";
+import { cart } from "./cartStorage.js";
 import { products } from "./products.js";
 export function renderPayment() {
   let checkoutHTML = "";
@@ -9,9 +9,7 @@ export function renderPayment() {
     matchingItem = products.find((product) => product.id == item.id);
     Quantity += item.quantity;
     totalBeforeTax += item.quantity * matchingItem.price;
-    console.log(cart);
   });
-  console.log(totalBeforeTax);
 
   checkoutHTML += `<div class="Checkout-contain">
           <h2 class="checkout-header">Order Summary</h2>
@@ -40,5 +38,4 @@ export function renderPayment() {
         </div>`;
 
   document.querySelector(".js-checkout-main-contain").innerHTML = checkoutHTML;
-  renderPayment();
 }

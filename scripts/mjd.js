@@ -1,8 +1,14 @@
 import { featureproducts } from "./featuredproduct.js";
-import { cart } from "./shop.js";
-import { addToStorage } from "./shop.js";
+import { cart } from "./cartStorage.js";
+import { addToStorage } from "./cartStorage.js";
 export let featuredHTML = "";
+import { rearangeHeader } from "./header.js";
+import { updatePageQuantity } from "./cartStorage.js";
+homepage();
+
 function homepage() {
+  rearangeHeader();
+
   featureproducts.forEach((product) => {
     featuredHTML += `
         <div class="featured-image-contain">
@@ -13,9 +19,10 @@ function homepage() {
           <button class="featured-add-button featured-add-button-js" data-product-id="${product.id}">ADD TO CART</button>
         </div>`;
   });
-  document.querySelector(".featured-product-contain-js").innerHTML =
-    featuredHTML;
-
+  const productDisplay = document.querySelector(".featured-product-contain-js");
+  if (productDisplay) {
+    productDisplay.innerHTML = featuredHTML;
+  }
   let addButton = document.querySelectorAll(".featured-add-button-js");
   addButton.forEach((button) => {
     let productId = button.dataset.productId;
@@ -33,20 +40,14 @@ function homepage() {
       updatePageQuantity();
     });
   });
-  function updatePageQuantity() {
-    let cartQuantity = 0;
-    cart.forEach((item) => {
-      cartQuantity += item.quantity;
-      addToStorage();
-    });
-    document.querySelector(".js-cart-count").innerHTML = cartQuantity;
-  }
+
   updatePageQuantity();
   let category = document.querySelector(".category-contain");
-  category.addEventListener("click", () => {
-    if (category) {
-      category.classList.toggle("display");
-    }
-  });
+  if (category) {
+    category.addEventListener("click", () => {
+      if (category) {
+        category.classList.toggle("display");
+      }
+    });
+  }
 }
-homepage();

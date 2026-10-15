@@ -1,6 +1,8 @@
-import { cart, addToStorage, removeProduct } from "./shop.js";
+import { removeProduct } from "./cartStorage.js";
 import { products } from "./products.js";
 import { renderPayment } from "./paymentsummary.js";
+import { cart } from "./cartStorage.js";
+import { addToStorage } from "./cartStorage.js";
 export function renderCart() {
   let matchingItem;
   let cartHTML = "";
@@ -32,7 +34,7 @@ export function renderCart() {
               <i class="fa-solid fa-naira-sign"></i>${matchingItem.price}
             </p>
             <p class="product-total-amount-js product-total-amount"><i class="fa-solid fa-naira-sign"></i>${matchingItem.price * cartItem.quantity}</p>
-            <button class="remove-product-js" data-product-id="${matchingItem.id}">x</button>
+            <button class="remove-product-js" data-product-id="${matchingItem.id}"><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>`;
     cartQuantity += cartItem.quantity;

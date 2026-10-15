@@ -1,4 +1,5 @@
 import { products } from "./products.js";
+import { rearangeHeader } from "./header.js";
 let url = new URL(window.location.href);
 const productID = url.searchParams.get("productId");
 console.log(productID);
@@ -40,3 +41,4 @@ innerHTML += `
         </div>
       </div>`;
 document.querySelector(".main-contain-js").innerHTML = innerHTML;
+rearangeHeader();

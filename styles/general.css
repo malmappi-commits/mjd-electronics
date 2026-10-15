@@ -2,8 +2,10 @@ p {
   margin: 0;
 }
 body {
-  margin-top: 83px;
+  margin-top: 112px;
   background-color: rgb(223, 221, 221);
+  margin-left: 0;
+  margin-right: 0;
 }
 a {
   display: flex;
@@ -13,41 +15,27 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   left: 0px;
   right: 0;
   top: 0;
-  height: 40px;
+  height: 70px;
   z-index: 2;
   background-color: white;
-  padding-left: 20px;
-}
-.mjd-text {
-  font-size: clamp(25px, 2vw, 2vw);
-  font-family: arial;
-  font-weight: bold;
-  background-color: rgb(53, 48, 48);
-  color: yellow;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-.store-name {
-  font-size: clamp(25px, 2vw, 2vw);
-  font-family: arial;
-  font-weight: bold;
-  background-color: yellow;
-  color: rgb(53, 48, 48);
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 0px;
 }
 .store-name-contain {
   flex: 1;
-  display: flex;
+}
+.store-name-contain img {
+  width: 80px;
+  margin-left: 10px;
+  padding-right: 40px;
 }
 .search-bar {
   border-width: 1px;
-  max-width: 400px;
-  height: 30px;
+  max-width: 500px;
+  height: 40px;
   border-radius: 5px;
   border-color: rgb(173, 171, 171);
   box-shadow: inset 1px 2px 3px rgba(77, 71, 71, 0.26);
@@ -79,15 +67,64 @@ a {
 }
 .second-header {
   margin-bottom: 20px;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
-  top: 41px;
+  top: 71px;
   background-color: rgb(53, 48, 48);
   height: 38px;
   display: flex;
   justify-content: space-between;
   z-index: 3;
+  transition: 0;
+}
+.second-header.scrolled {
+  height: 70px;
+  top: 0;
+  align-items: center;
+  transition: 0;
+  position: fixed;
+}
+.second-header.scrolled .store-name-contain img {
+  margin-left: 4px;
+}
+.second-header.scrolled .category {
+  margin-right: 5px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+.second-header.scrolled .store-name-contain {
+  flex: 0;
+}
+.scrolled .login-and-search {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.search-main-contain-second-header {
+  position: relative;
+}
+.search-contain-second-header {
+  position: absolute;
+  top: 200%;
+  right: 250px;
+  display: none;
+}
+.button-active .search-contain-second-header {
+  display: block;
+}
+.search-bar-second-header {
+  border-width: 1px;
+  height: 35px;
+  border-radius: 5px;
+  border-color: rgb(173, 171, 171);
+  box-shadow: inset 1px 2px 3px rgba(77, 71, 71, 0.26);
+  border-style: solid;
+  outline: 0;
+  width: clamp(370px, 30vw, 30vw);
 }
 .header-buttons {
   margin-left: 30px;
@@ -118,7 +155,6 @@ a {
   background-color: transparent;
   color: white;
   border: none;
-  padding-right: 40px;
   font-weight: 500;
   transition: 0.4s;
   cursor: pointer;
@@ -127,7 +163,9 @@ a {
   color: yellow;
 }
 .cart-count,
-.like-count {
+.like-count,
+.login-second-header,
+.search-second-header {
   background-color: transparent;
   border-width: 0;
   color: white;
@@ -136,9 +174,15 @@ a {
   font-family: roboto;
   cursor: pointer;
 }
+
 .naira-sign,
-.cart-sign {
+.cart-sign,
+.search-icon,
+.login-icon {
   color: yellow;
+}
+.login-and-search {
+  display: none;
 }
 .my-account-button {
   background-color: rgb(24, 5, 58);
@@ -157,10 +201,21 @@ a {
   padding-right: 7px;
   font-size: 17px;
 }
-
+.shrink-account-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(18, 18, 66);
+  font-size: 40px;
+}
 .category-contain {
   display: flex;
   position: relative;
+}
+.shrik-category-button {
+  background-color: transparent;
+  border: none;
+  color: yellow;
+  font-size: 25px;
 }
 .dropdown {
   display: none;
@@ -171,6 +226,15 @@ a {
   display: flex;
   flex-direction: column;
 }
+.mini-nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-logo {
+  color: white;
+  font-size: 15px;
+}
 .footer-contain {
   background-color: rgb(53, 48, 48);
   margin-top: 100px;
@@ -178,10 +242,11 @@ a {
   flex-direction: column;
   padding: 30px;
 }
+
 .footer-logo {
   color: white;
   font-family: roboto;
-  font-size: 30px;
+  width: 120px;
   font-weight: bold;
 }
 .footer-topic {
@@ -191,6 +256,7 @@ a {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .footer-inner-contain {
   margin-top: 30px;
   display: flex;
@@ -220,7 +286,7 @@ a {
   display: flex;
   gap: 20px;
   justify-content: end;
-  padding-right: 250px;
+  padding-right: 20vw;
   margin-top: 20px;
 }
 .account-link {
@@ -231,9 +297,67 @@ a {
 }
 .footer-last {
   color: white;
+  white-space: nowrap;
 }
 .footer-last-contain {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+}
+.nav-button {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 950px) {
+  .nav-button {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 70px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(32, 23, 23);
+  }
+  body {
+    padding-bottom: 60px;
+  }
+
+  .head-buttons {
+    padding: 0;
+  }
+  .category {
+    display: none;
+  }
+  .search-contain-second-header {
+    position: absolute;
+    right: -100px;
+  }
+}
+@media (max-width: 600px) {
+  .my-account-button {
+    display: none;
+  }
+
+  .footer-inner-contain {
+    flex-direction: column;
+  }
+}
+@media (min-width: 951px) {
+  .shrik-category-button {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  .shrink-account-button {
+    display: none;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
 }

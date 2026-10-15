@@ -1,0 +1,28 @@
+.image-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-contain img {
+  width: 150px;
+}
+.login-main-contain {
+  width: 50%;
+  margin: 100px auto;
+  background-color: rgba(128, 128, 128, 0.219);
+  border-radius: 30px;
+  min-height: 700px;
+}
+.login-header {
+  font-family: roboto;
+}
+.login-inner-contain {
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+}
+.header-contain {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

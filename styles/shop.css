@@ -1,3 +1,7 @@
+html,
+body {
+  overflow-x: hidden;
+}
 .shop-inner-header {
   font-family: roboto;
   letter-spacing: 8px;
@@ -34,6 +38,7 @@
   font-size: 28px;
   transition: transform 0.3s ease;
   outline: none;
+  color: black;
 }
 .category-button:hover {
   color: rgb(60, 60, 122);
@@ -47,11 +52,9 @@
 .main-product-contain {
   background-color: white;
   display: flex;
-  width: 95%;
   justify-content: space-between;
   flex-direction: column;
   margin: 40px auto;
-  background-color: white;
   padding: 20px;
   border-radius: 20px;
 }
@@ -78,8 +81,10 @@
 }
 .featured-product-name {
   font-family: roboto;
+  font-size: clamp(15px, 20px, 1vw);
   font-weight: bold;
   color: rgb(0, 0, 0);
+  white-space: wrap;
 }
 .featured-product-amount {
   color: red;
@@ -91,7 +96,7 @@
   color: red;
 }
 .featured-product-brand {
-  font-size: 22px;
+  font-size: clamp(18px, 2vw, 22px);
   margin-top: 10px;
 }
 .featured-brand-name {
@@ -108,10 +113,46 @@
   border-radius: 10px;
   opacity: 0.3;
   cursor: pointer;
+  color: black;
 }
 
 .featured-product-contain {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: end;
+}
+@media (max-width: 1250px) {
+  .featured-product-contain {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 950px) {
+  .shop-category-buttons-contain {
+    display: none;
+    flex-wrap: wrap;
+  }
+  .featured-product-contain {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .shop-category-buttons-contain.categoty-active {
+    display: flex;
+  }
+}
+@media (min-width: 950px) {
+  .shop-filter-categories {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .featured-product-contain {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .featured-product-name {
+    white-space: normal;
+  }
+  .featured-image-contain {
+    width: 170px;
+  }
 }
