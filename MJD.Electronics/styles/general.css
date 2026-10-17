@@ -1,0 +1,363 @@
+p {
+  margin: 0;
+}
+body {
+  margin-top: 112px;
+  background-color: rgb(223, 221, 221);
+  margin-left: 0;
+  margin-right: 0;
+}
+a {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 0px;
+  right: 0;
+  top: 0;
+  height: 70px;
+  z-index: 2;
+  background-color: white;
+  padding-left: 0px;
+}
+.store-name-contain {
+  flex: 1;
+}
+.store-name-contain img {
+  width: 80px;
+  margin-left: 10px;
+  padding-right: 40px;
+}
+.search-bar {
+  border-width: 1px;
+  max-width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(173, 171, 171);
+  box-shadow: inset 1px 2px 3px rgba(77, 71, 71, 0.26);
+  border-style: solid;
+  outline: 0;
+  width: 200%;
+}
+.search-contain {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.search-bar::placeholder {
+  padding-left: 10px;
+}
+.customer-service-div {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 2%;
+  justify-content: end;
+}
+.customer-service {
+  font-family: arial;
+  color: grey;
+  font-size: 14px;
+}
+.second-header {
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 71px;
+  background-color: rgb(53, 48, 48);
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  transition: 0;
+}
+.second-header.scrolled {
+  height: 70px;
+  top: 0;
+  align-items: center;
+  transition: 0;
+  position: fixed;
+}
+.second-header.scrolled .store-name-contain img {
+  margin-left: 4px;
+}
+.second-header.scrolled .category {
+  margin-right: 5px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
+.second-header.scrolled .store-name-contain {
+  flex: 0;
+}
+.scrolled .login-and-search {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.search-main-contain-second-header {
+  position: relative;
+}
+.search-contain-second-header {
+  position: absolute;
+  top: 200%;
+  right: 250px;
+  display: none;
+}
+.button-active .search-contain-second-header {
+  display: block;
+}
+.search-bar-second-header {
+  border-width: 1px;
+  height: 35px;
+  border-radius: 5px;
+  border-color: rgb(173, 171, 171);
+  box-shadow: inset 1px 2px 3px rgba(77, 71, 71, 0.26);
+  border-style: solid;
+  outline: 0;
+  width: clamp(370px, 30vw, 30vw);
+}
+.header-buttons {
+  margin-left: 30px;
+  display: flex;
+  font-family: arial;
+}
+.category {
+  padding-right: clamp(30px, 100px, 5vw);
+  padding-left: 20px;
+  background-color: yellow;
+  border: none;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.category-button-contain {
+  display: flex;
+}
+.cart-like {
+  flex: 1;
+  max-width: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.head-buttons {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: 500;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.head-buttons:hover {
+  color: yellow;
+}
+.cart-count,
+.like-count,
+.login-second-header,
+.search-second-header {
+  background-color: transparent;
+  border-width: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: roboto;
+  cursor: pointer;
+}
+
+.naira-sign,
+.cart-sign,
+.search-icon,
+.login-icon {
+  color: yellow;
+}
+.login-and-search {
+  display: none;
+}
+.my-account-button {
+  background-color: rgb(24, 5, 58);
+  border: none;
+  font-family: Arial;
+  font-size: 15px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 17px;
+  padding-left: 11px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.login-logo {
+  padding-right: 7px;
+  font-size: 17px;
+}
+.shrink-account-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(18, 18, 66);
+  font-size: 40px;
+}
+.category-contain {
+  display: flex;
+  position: relative;
+}
+.shrik-category-button {
+  background-color: transparent;
+  border: none;
+  color: yellow;
+  font-size: 25px;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+.display .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.mini-nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-logo {
+  color: white;
+  font-size: 15px;
+}
+.footer-contain {
+  background-color: rgb(53, 48, 48);
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.footer-logo {
+  color: white;
+  font-family: roboto;
+  width: 120px;
+  font-weight: bold;
+}
+.footer-topic {
+  color: white;
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-inner-contain {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+.footer-explanation,
+.footer-last {
+  color: white;
+  font-family: roboto;
+}
+.footer-descriptions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.support-button {
+  background-color: transparent;
+  color: green;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: none;
+  font-family: roboto;
+  padding-left: 0;
+}
+.account-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  padding-right: 20vw;
+  margin-top: 20px;
+}
+.account-link {
+  font-size: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: rgb(82, 79, 79);
+}
+.footer-last {
+  color: white;
+  white-space: nowrap;
+}
+.footer-last-contain {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.nav-button {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 950px) {
+  .nav-button {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 70px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(32, 23, 23);
+  }
+  body {
+    padding-bottom: 60px;
+  }
+
+  .head-buttons {
+    padding: 0;
+  }
+  .category {
+    display: none;
+  }
+  .search-contain-second-header {
+    position: absolute;
+    right: -100px;
+  }
+}
+@media (max-width: 600px) {
+  .my-account-button {
+    display: none;
+  }
+
+  .footer-inner-contain {
+    flex-direction: column;
+  }
+}
+@media (min-width: 951px) {
+  .shrik-category-button {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  .shrink-account-button {
+    display: none;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
