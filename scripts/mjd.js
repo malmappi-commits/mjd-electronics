@@ -51,3 +51,10 @@ function homepage() {
     });
   }
 }
+let loadScreen = document.querySelector(".loading-screen");
+window.addEventListener("load", () => {
+  loadScreen.classList.add("loaded");
+  console.log(loadScreen.classList);
+  console.log("page has finished");
+  console.log(loadScreen);
+});
